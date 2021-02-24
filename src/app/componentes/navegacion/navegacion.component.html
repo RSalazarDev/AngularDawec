@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-sm sticky-top bg-dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/"><i class="fab fa-angular"></i>ngular DAW</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/home" routerLinkActive="{{estiloActivo}}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/about" routerLinkActive="{{estiloActivo}}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/loteria" routerLinkActive="{{estiloActivo}}">Lotería</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/calculadora" routerLinkActive="{{estiloActivo}}"><i class="fas fa-calculator"></i>Calculadora</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/tuberias" routerLinkActive="{{estiloActivo}}">Tuberías</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/estructuras" routerLinkActive="{{estiloActivo}}">Estructuras</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/formulario" routerLinkActive="{{estiloActivo}}">Formulario</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/crudlocal" routerLinkActive="{{estiloActivo}}">Crud Local</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/crud" routerLinkActive="{{estiloActivo}}"><i class="fas fa-database"></i>Crud</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/listaPerfiles" routerLinkActive="{{estiloActivo}}"><i class="fas fa-users"></i>Lista de usuarios</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav mt-2 mt-lg-0">
+            <ng-template [ngIf]='!fnLogged()' [ngIfElse]='salir'>
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/registro" routerLinkActive="{{estiloActivo}}">Registro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/login" routerLinkActive="{{estiloActivo}}">Login</a>
+            </li>
+        </ng-template>
+        <ng-template #salir>
+            <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/perfil" routerLinkActive="{{estiloActivo}}">Perfil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" (click)="doLogout()" routerLink='.'>Logout</a>
+            </li>
+        </ng-template>
+       
+        </ul>
+    </div>
+  </div>
+</nav>

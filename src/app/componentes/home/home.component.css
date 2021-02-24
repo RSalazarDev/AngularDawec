@@ -1,0 +1,11 @@
+.list-group-item{
+  font-size: 1.3em;
+  font-style: italic;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.jumbotron{
+  padding : 4rem 2rem;
+  border-radius: 1em;
+  font-family: 'Architects Daughter', cursive;
+}

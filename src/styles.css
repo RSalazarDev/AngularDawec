@@ -1,0 +1,17 @@
+.card{
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  border-radius: 0.4em;
+}
+
+
+html { 
+  background: url("src\assets\images\fondo1.jpeg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+  background: url("src\assets\images\fondo1.jpeg")
+}
