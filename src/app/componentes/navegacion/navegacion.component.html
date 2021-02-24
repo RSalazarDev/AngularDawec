@@ -7,21 +7,20 @@
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-                <a class="nav-link text-light" routerLink="/home" routerLinkActive="{{estiloActivo}}">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" routerLink="/about" routerLinkActive="{{estiloActivo}}">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" routerLink="/loteria" routerLinkActive="{{estiloActivo}}">Lotería</a>
-            </li>
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  Utilidades
+                </button>
+                <div class="dropdown-menu">
+                    <a class="nav-link text-light" routerLink="/about" routerLinkActive="{{estiloActivo}}">About</a>
+                    <a class="nav-link text-light" routerLink="/loteria" routerLinkActive="{{estiloActivo}}">Lotería</a>
+                    <a class="nav-link text-light" routerLink="/tuberias" routerLinkActive="{{estiloActivo}}">Tuberías</a>
+                </div>
+              </div>
             <li class="nav-item">
                 <a class="nav-link text-light" routerLink="/calculadora" routerLinkActive="{{estiloActivo}}"><i class="fas fa-calculator"></i>Calculadora</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" routerLink="/tuberias" routerLinkActive="{{estiloActivo}}">Tuberías</a>
-            </li>
+            
             <li class="nav-item">
                 <a class="nav-link text-light" routerLink="/estructuras" routerLinkActive="{{estiloActivo}}">Estructuras</a>
             </li>
@@ -41,10 +40,10 @@
         <ul class="navbar-nav mt-2 mt-lg-0">
             <ng-template [ngIf]='!fnLogged()' [ngIfElse]='salir'>
             <li class="nav-item">
-                <a class="nav-link text-light" routerLink="/registro" routerLinkActive="{{estiloActivo}}">Registro</a>
+                <a class="nav-link text-light" routerLink="/registro" routerLinkActive="{{estiloActivo}}"><i class="fa fa-user-plus" aria-hidden="true"></i>Registro</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" routerLink="/login" routerLinkActive="{{estiloActivo}}">Login</a>
+                <a class="nav-link text-light" routerLink="/login" routerLinkActive="{{estiloActivo}}"> <i class="fa fa-street-view" aria-hidden="true"></i>Login</a>
             </li>
         </ng-template>
         <ng-template #salir>
